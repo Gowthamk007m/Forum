@@ -1,0 +1,27 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<!DOCTYPE html>
+<html>
+<head>
+  <title>My Page</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+</head>
+
+<body>
+
+  <div class="container-fluid d-flex justify-content-center align-items-center vh-100">
+    <div class="col-md-8">
+      <h2 class="text-center mb-4">Create a Post</h2>
+      <form method="post">
+        {% csrf_token %}
+        {{ form.as_p }}
+        <button type="submit" class="btn btn-primary btn-block">Submit</button>
+      </form>
+    </div>
+  </div>
+
+</body>
+</html>
+
+{% endblock %}

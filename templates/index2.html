@@ -1,0 +1,107 @@
+{% load static %}
+<!DOCTYPE HTML>
+
+<html>
+	<head>
+		<title>Alpha by HTML5 UP</title>
+		<meta charset="utf-8" />
+		<meta name="viewport" content="width=device-width, initial-scale=1, user-scalable=no" />
+		<link rel="stylesheet" href="{% static 'assets/css/main.css' %}" />
+	</head>
+	<style>
+		header{
+			margin: 0px;
+			
+		}
+	</style>
+	<body class="landing is-preload">
+		<div id="page-wrapper">
+
+			<!-- Header -->
+				<header id="header" class="alt">
+					<h1><a href="index.html">Collage</a> Forum </h1>
+					<nav id="nav">
+						<ul>
+							<li><a href="/">Home</a></li>
+					
+							<li><a href="{% url 'login' %}" class="button">About</a></li>
+						</ul>
+					</nav>
+				</header>
+
+			<!-- Banner -->
+				<section id="banner">
+					<h2>Collage Forum</h2>
+					<p>An platform for staffs and students to keep themself up.</p>
+					<ul class="actions special">
+						<li><a href="{% url 'register' %}" class="button primary">Sign Up</a></li>
+						<li><a href="{% url 'login' %}" class="button">Sign In</a></li>
+					</ul>
+				</section>
+
+			<!-- Main -->
+				<section id="main" class="container">
+
+							<h2 style="text-decoration: underline;">
+							
+						<span class="image featured"><img src="{% static 'images/campus.jpg' %}" alt="" /></span>
+					</section>
+
+					<section class="box special features">
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-bolt accent2"></span>
+								<h3>Teaching</h3>
+								<p>Teachers play a crucial role in the education system as they are responsible for imparting knowledge and skills to students. They are not only responsible for delivering lectures but also for shaping the overall personality of students. A good teacher possesses not only excellent subject knowledge but also excellent communication and interpersonal skills.</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-chart-area accent3"></span>
+								<h3>Students</h3>
+								<p>Students are the central focus of any educational institution. They are the reason why teachers, management, and facilities exist. Students come from different backgrounds and have different learning styles, and therefore it is important to cater to their diverse needs. </p>
+							</section>
+						</div>
+						<div class="features-row">
+							<section>
+								<span class="icon solid major fa-cloud accent4"></span>
+								<h3>Management</h3>
+								<p>The management of an educational institution is responsible for ensuring that the institution runs smoothly and efficiently. They are responsible for hiring and training teachers, managing the finances, and developing policies and procedures that promote a safe and conducive learning environment.</p>
+							</section>
+							<section>
+								<span class="icon solid major fa-lock accent5"></span>
+								<h3> Facilities </h3>
+								<p>Facilities are an important aspect of any educational institution. They include classrooms, laboratories, libraries, sports facilities, and other amenities that promote a holistic learning experience. </p>
+							</section>
+						</div>
+					</section>
+
+
+				</section>
+
+		
+				<footer id="footer">
+					<ul class="icons">
+						<li><a href="#" class="icon brands fa-twitter"><span class="label">Twitter</span></a></li>
+						<li><a href="#" class="icon brands fa-facebook-f"><span class="label">Facebook</span></a></li>
+						<li><a href="#" class="icon brands fa-instagram"><span class="label">Instagram</span></a></li>
+						<li><a href="#" class="icon brands fa-github"><span class="label">Github</span></a></li>
+						<li><a href="#" class="icon brands fa-dribbble"><span class="label">Dribbble</span></a></li>
+						<li><a href="#" class="icon brands fa-google-plus"><span class="label">Google+</span></a></li>
+					</ul>
+					<ul class="copyright">
+						<li>&copy; Untitled. All rights reserved.</li><li>Design: <a href="http://html5up.net">HTML5 UP</a></li>
+					</ul>
+				</footer> -->
+
+		</div>
+
+		<!-- Scripts -->
+			<script src="{% static 'assets/js/jquery.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.dropotron.min.js' %}"></script>
+			<script src="{% static 'assets/js/jquery.scrollex.min.js' %}"></script>
+			<script src="{% static 'assets/js/browser.min.js' %}"></script>
+			<script src="{% static 'assets/js/breakpoints.min.js' %}"></script>
+			<script src="{% static 'assets/js/util.js' %}"></script>
+			<script src="{% static 'assets/js/main.js' %}"></script>
+
+	</body>
+</html>

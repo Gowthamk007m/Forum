@@ -1,0 +1,131 @@
+{% load static %}
+<!doctype html>
+<html lang="en">
+  <head>
+  	<title>Login 01</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+	<link href="https://fonts.googleapis.com/css?family=Lato:300,400,700&display=swap" rel="stylesheet">
+
+	<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+	
+	<link rel="stylesheet" href="{% static 'login/css/style.css' %}">
+
+	</head>
+	<body>
+	<section class="ftco-section">
+		<div class="container">
+			<div class="row justify-content-center">
+				<div class="col-md-6 text-center mb-5">
+					<h2 class="heading-section">Login</h2>
+				</div>
+			</div>
+			<div class="row justify-content-center">
+				<div class="col-md-7 col-lg-5">
+					<div class="login-wrap p-4 p-md-5">
+		      	<div class="icon d-flex align-items-center justify-content-center">
+		      		<span class="fa fa-user-o"></span>
+		      	</div>
+		      	<h3 class="text-center mb-4">Sign In</h3>
+
+					<form class="login-form" method="post">
+  {% csrf_token %}
+  <div class="form-group">
+    <label for="username">Username</label>
+    <input type="text" class="form-control rounded-left" id="username" name="username" placeholder="Enter your username" required>
+  </div>
+  <div class="form-group">
+    <label for="password">Password</label>
+    <input type="password" class="form-control rounded-left" id="password" name="password" placeholder="Enter your password" required>
+  </div>
+  <div class="form-group d-md-flex">
+    <div class="w-50">
+      <label class="checkbox-wrap checkbox-primary">Remember Me
+        <input type="checkbox" checked>
+        <span class="checkmark"></span>
+      </label>
+    </div>
+    <div class="w-50 text-md-right">
+      <a href="#">Forgot Password</a>
+    </div>
+  </div>
+  <div class="form-group">
+    <button type="submit" class="form-control btn btn-primary rounded submit px-3">Login</button>
+  </div>
+</form>
+<div class=" row justify-content-center ">{% if form %}
+          <div class="alert alert-danger">
+            {{ form }}
+          </div>
+        {% endif %}</div>
+				</div>
+			</div>
+		</div>
+
+<div class="col justify-content-center w-100">
+			<div class="list-group">
+
+<button type="button" class="list-group-item list-group-item-action" data-role="student1">
+  Login as Student1
+</button>
+<button type="button" class="list-group-item list-group-item-action" data-role="student2">
+  Login as Student2
+</button>
+<button type="button" class="list-group-item list-group-item-action" data-role="Admin">
+  Login as Admin
+</button>
+
+
+</div>
+		</div>
+
+	</section>
+
+  <script>
+document.addEventListener('DOMContentLoaded', function() {
+  // Select all the role-specific buttons
+  const buttons = document.querySelectorAll('.list-group-item[data-role]');
+
+  // Select the username and password fields
+  const usernameField = document.getElementById('username');
+  const passwordField = document.getElementById('password');
+
+  // Add a click event listener to each button
+  buttons.forEach(function(button) {
+    button.addEventListener('click', function() {
+      // Get the role from the data-role attribute of the clicked button
+      const role = this.getAttribute('data-role');
+
+      // Populate the form fields with predefined credentials based on the role
+      switch (role) {
+        case 'student1':
+          usernameField.value = 'Jaimel';
+          passwordField.value = 'admin1234';
+          break;
+        case 'student2':
+          usernameField.value = 'Jhon';
+          passwordField.value = 'admin1234';
+          break;
+        case 'Admin':
+          usernameField.value = 'admin';
+          passwordField.value = '12345';
+          break;
+        default:
+          // Handle any other roles or unknown roles here
+          break;
+      }
+    });
+  });
+});
+
+</script>
+
+	<script src="{% static 'login/js/jquery.min.js' %}"></script>
+  <script src="{% static 'login/js/popper.js' %}"></script>
+  <script src="{% static 'login/js/bootstrap.min.js' %}"></script>
+  <script src="{% static 'login/js/main.js' %}"></script>
+
+	</body>
+</html>
+
