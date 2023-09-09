@@ -30,6 +30,15 @@ To get started with the College Forum Application:
 2. Explore existing discussions or start a new one.
 3. Engage with fellow students, teachers, and administrators to enhance your school experience.
 
+## Used Technologies
+
+- [![Django](https://img.shields.io/badge/Django-3.2.4-green)](https://www.djangoproject.com/)
+- [![Bootstrap](https://img.shields.io/badge/Bootstrap-5.5.0-blue)](https://getbootstrap.com/)
+- [![Python](https://img.shields.io/badge/Python-3.9.6-yellow)](https://www.python.org/)
+- [![SQLite](https://img.shields.io/badge/SQLite-3.36.0-lightgrey)](https://www.sqlite.org/)
+- [![HTML](https://img.shields.io/badge/HTML-5-orange)](https://developer.mozilla.org/en-US/docs/Web/HTML)
+- [![CSS](https://img.shields.io/badge/CSS-3-blueviolet)](https://developer.mozilla.org/en-US/docs/Web/CSS)
+
 ## Contributing
 
 We welcome contributions to improve and expand this application. If you have ideas for enhancements or encounter any issues, please feel free to submit them via the application's feedback or contact our support team.
